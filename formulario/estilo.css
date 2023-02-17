@@ -1,0 +1,118 @@
+:root {
+    --color-white: #fff;
+    --color-red: #e63636;
+    --color-dark1: hsl(270, 2%, 25%);
+    --color-dark2: #1e1e1e;
+    --color-purple1: #9333FF;
+    --color-purple2: indigo;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-dark1);
+    color: var(--color-white);
+    display: flex;
+    /* flex box modo de alinhamento e centralização*/
+    justify-content: center;
+    /* flex box modo de alinhamento e centralização*/
+    align-items: center;
+    /* flex box modo de alinhamento e centralização*/
+    height: 100vh;
+    /* altura total do formulario (body)*/
+
+}
+
+.content {
+    background-color: var(--color-dark2);
+    padding: 2rem;
+    /*espaço entre os elementos e suas bordas (2rem ou 32px da o mesmo tamanho) */
+    border-radius: 10px;
+    /*arredondar as bordas*/
+    min-width: 30%;
+    /*diminuir a pagina se necessario ,porem manter o texto no mesmo lugar*/
+    overflow: auto;
+    /*possibilita navegar dentro da div aumentando ou diminuindo o campo de digitação*/
+}
+
+h1 {
+    /*formulario*/
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--color-purple1);
+
+}
+
+.content form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.span-requisito {
+    display: none;
+}
+
+.inputs {
+    padding: 8px, 5px;
+    outline: none;
+    border-radius: 5px;
+    background-color: var(--color-dark1);
+    border: 2px solid var(--color-dark2);
+    color: var(--color-white);
+    width: 100%;
+    box-sizing: border-box;
+    transition: .3s;
+
+}
+
+.inputs:focus {
+    border-color: var(--color-purple1);
+
+}
+
+.box-select {
+    /*div box select*/
+    display: flex;
+    /*elementos 1 ao lado do outro*/
+    justify-content: space-evenly;
+    /*deixa os elementos alinhados e com o mesmo tamanho de espaçamento*/
+    font-weight: bold;
+    gap: 1rem;
+    
+
+
+
+}
+
+button[type="submit"] {
+    /*chamar o button obs: ele não possui class neim id*/
+    padding: 1rem;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    background-color: var(--color-purple2);
+    color: var(--color-white);
+    cursor: pointer;
+    transition: .3s;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--color-purple1);
+}
+
+@media screen and (max-widht: 576px) {
+    .box-select {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+}
